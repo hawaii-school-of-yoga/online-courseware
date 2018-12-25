@@ -1,1 +1,1 @@
-export default () => <div>Welcome to next.js!</div>;
+export default () => <div>Welcome to the Official Hawaii School of Yoga Online Courseware!</div>;
