@@ -16,6 +16,7 @@
 		"next": "^7.0.2",
 		"react": "^16.7.0",
 		"react-dom": "^16.7.0",
+		"react-player": "^1.8.0"
 		"reactstrap": "^6.5.0"
 	}
 }
