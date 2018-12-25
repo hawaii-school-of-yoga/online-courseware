@@ -1,0 +1,18 @@
+{
+	"name": "hsyonline",
+	"version": "0.0.1",
+	"author": "Austin Witherow",
+	"description": "Hawaii School of Yoga Online Courseware Platform",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start -p $PORT",
+		"heroku-postbuild": "next build"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"next": "^7.0.2",
+		"react": "^16.7.0",
+		"react-dom": "^16.7.0"
+	}
+}
