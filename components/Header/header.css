@@ -1,0 +1,21 @@
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	width: 120px;
+}
+
+.title-bar {
+}
+
+.user-bar {
+}
+
+.user-bar img {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+}
