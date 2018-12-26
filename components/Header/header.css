@@ -1,21 +1,35 @@
-nav {
+.navbar,
+.user-bar {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+}
+
+.title-bar h1 {
+	font-family: 'Hello Tropical', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .logo {
-	width: 120px;
+	width: 80px;
 }
 
 .title-bar {
 }
 
 .user-bar {
+	margin-left: auto;
 }
 
 .user-bar img {
-	width: 80px;
-	height: 80px;
-	border-radius: 40px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+
+.user-bar h4 {
+	padding: 8px;
+	font-size: 14px;
+	font-weight: 100;
+	color: white;
 }

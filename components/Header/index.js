@@ -6,15 +6,18 @@ export default class Header extends Component {
 		const { course, user } = this.props;
 
 		return (
-			<nav className="navbar sticky-top">
-				<img className="logo" src="/static/img/logo.png" />
+			<nav className="navbar">
+				<div className="logo-bar">
+					<img className="logo" src="/static/img/logo-no-text.png" />
+				</div>
 				<div className="title-bar">
-					<h1>{course.title}</h1>
-					<h2>{course.module.title}</h2>
+					<h1>Hawaii School of Yoga Online Course Portal</h1>
 				</div>
 				<div className="user-bar">
 					<img src={user.img} />
-					<h3>{user.name}</h3>
+					<div className="">
+						<h4>{user.name}</h4>
+					</div>
 				</div>
 			</nav>
 		);
