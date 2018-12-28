@@ -11,7 +11,8 @@ export default class Header extends Component {
 					<img className="logo" src="/static/img/logo-no-text.png" />
 				</div>
 				<div className="title-bar">
-					<h1>Hawaii School of Yoga Online Course Portal</h1>
+					<h1>Hawaii School of Yoga</h1>
+					<img className="aum" src="/static/img/aum.png" />
 				</div>
 				<div className="user-bar">
 					<img src={user.img} />

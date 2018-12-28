@@ -1,35 +1,83 @@
+.navbar {
+	background: rgba(0, 0, 0, 0.22);
+	padding: 0px 8px 8px 8px;
+}
+
 .navbar,
 .user-bar {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-wrap: nowrap;
+}
+
+.breadcrumb {
+	flex-direction: column;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	content: "-";
+}
+
+.breadcrumb-item.active {
+	color: #b87333;
+}
+
+.logo {
+	width: 48px;
 }
 
 .title-bar h1 {
 	font-family: 'Hello Tropical', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.logo {
-	width: 80px;
-}
-
 .title-bar {
+	padding: 16px 8px 8px 0;
+	margin: 0 auto;
+	text-align: center;
 }
 
-.user-bar {
-	margin-left: auto;
+.title-bar h1 {
+	font-size: 32px;
+	padding: 0;
+	margin: 0;
+	line-height: 18px;
+	color: white;
 }
 
-.user-bar img {
-	width: 60px;
-	height: 60px;
-	border-radius: 30px;
+.title-bar .aum {
+	width: 16px;
 }
 
 .user-bar h4 {
-	padding: 8px;
-	font-size: 14px;
-	font-weight: 100;
-	color: white;
+	display: none;
+}
+
+.user-bar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+	.title-bar {
+		padding: 16px;
+	}
+
+	.user-bar {
+		margin-left: auto;
+	}
+
+	.user-bar img {
+		width: 60px;
+		height: 60px;
+		border-radius: 30px;
+	}
+
+	.user-bar h4 {
+		padding: 8px;
+		font-size: 14px;
+		font-weight: 100;
+		color: white;
+	}
 }
