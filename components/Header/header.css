@@ -1,0 +1,131 @@
+.navbar {
+	background: rgba(0, 0, 0, 0.22);
+	padding: 0px 8px 8px 8px;
+}
+
+.navbar .container,
+.user-bar,
+.mantra {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+.logo {
+	width: 48px;
+}
+
+.title-bar h1 {
+	font-family: 'Hello Tropical', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title-bar {
+	padding: 16px 8px 8px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title-bar h1 {
+	font-size: 28px;
+	padding: 0;
+	margin: 0 0 8px 0;
+	line-height: 12px;
+	color: white;
+}
+
+.lokah {
+	display: none;
+}
+
+.title-bar .aum {
+	width: 20px;
+}
+
+.user-bar {
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.info-container {
+	display: none;
+}
+
+.user-bar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+@media (min-width: 425px) {
+	.title-bar h1 {
+		font-size: 28px;
+		line-height: 18px;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		padding: 0;
+	}
+
+	.navbar .container {
+		justify-content: flex-start;
+		padding: 16px 0;
+	}
+
+	.logo {
+		width: 77px;
+	}
+
+	.title-bar {
+		padding: 0 0 0 16px;
+		margin: 0;
+		text-align: left;
+	}
+
+	.title-bar h1 {
+		font-size: 54px;
+		line-height: 38px;
+	}
+
+	.mantra {
+		justify-content: flex-start;
+	}
+
+	.title-bar .aum {
+		width: 24px;
+	}
+
+	.lokah {
+		display: inline;
+		padding: 0;
+		margin: 0 0 0 8px;
+		font-size: 14px;
+		font-weight: 500;
+		color: white;
+		font-size: 24px;
+	}
+
+	.user-bar {
+		margin-left: auto;
+	}
+
+	.user-bar img {
+		width: 60px;
+		height: 60px;
+		border-radius: 30px;
+	}
+
+	.info-container {
+		display: block;
+		padding-left: 8px;
+	}
+
+	.user-bar h4 {
+		color: white;
+		font-weight: 100;
+		font-size: 16px;
+		margin-bottom: 8px;
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"course": {
+		"title": "200 Hour Hatha and Tantra",
+		"module": {
+			"title": "The Five Elements",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat massa, aliquet sit amet nisi quis, commodo hendrerit ipsum. Nullam aliquam elit eu turpis mollis congue. Etiam accumsan orci non mauris hendrerit, at fringilla metus commodo. Vivamus facilisis magna nec ipsum efficitur malesuada."
+		}
+	},
+	"user": {
+		"img": "/static/mocks/user/img.jpg",
+		"name": "Zeny Bhagat Singh"
+	}
+}
