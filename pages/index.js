@@ -11,14 +11,16 @@ export default class Index extends Component {
 		return (
 			<div>
 				<Header course={state.course} user={state.user} />
-				<Breadcrumb>
-					<BreadcrumbItem>
-						<a href="#">Home</a>
-					</BreadcrumbItem>
-					<BreadcrumbItem>{state.course.title}</BreadcrumbItem>
-					<BreadcrumbItem active>{state.course.module.title}</BreadcrumbItem>
-				</Breadcrumb>
-				<Video url="www.youtube.com/watch?v=b5H3b_Hh0Lw" />
+				<div className="container main">
+					<Breadcrumb>
+						<BreadcrumbItem>
+							<a href="#">Courses</a>
+						</BreadcrumbItem>
+						<BreadcrumbItem>{state.course.title}</BreadcrumbItem>
+						<BreadcrumbItem active>{state.course.module.title}</BreadcrumbItem>
+					</Breadcrumb>
+					<Video url="www.youtube.com/watch?v=b5H3b_Hh0Lw" />
+				</div>
 			</div>
 		);
 	}

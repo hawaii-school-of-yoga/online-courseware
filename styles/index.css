@@ -16,3 +16,11 @@ body {
 	font-weight: normal;
 	font-style: normal;
 } */
+
+.button-group .btn {
+	margin: 2px !important;
+}
+
+.container.main {
+	margin-top: 16px;
+}
