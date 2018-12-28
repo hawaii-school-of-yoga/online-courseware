@@ -10,12 +10,13 @@ body {
 	background: transparent;
 }
 
-/* @font-face {
+@font-face {
 	font-family: 'Hello Tropical';
-	src: url('HelloTropical.woff2') format('woff2'), url('HelloTropical.woff') format('woff');
+	src: url('/static/fonts/HelloTropical.woff2') format('woff2'),
+		url('/static/fonts/HelloTropical.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-} */
+}
 
 .button-group .btn {
 	margin: 2px !important;

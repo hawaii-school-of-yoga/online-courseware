@@ -9,7 +9,7 @@ export default class Header extends Component {
 		const { course, user } = this.props;
 
 		return (
-			<nav className="navbar sticky-top">
+			<nav className="navbar">
 				<div className="container">
 					<div className="logo-bar">
 						<img className="logo" src="/static/img/logo-no-text.png" />
