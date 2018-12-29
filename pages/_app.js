@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import mockData from '../prototype-mocks.json';
 
 import '../styles/index.scss';
+import '../styles/bootstrap.scss';
 
 export default class MyApp extends App {
 	state = { activeCourse: 1, activeModule: 1 };
