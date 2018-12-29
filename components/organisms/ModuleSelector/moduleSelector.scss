@@ -1,0 +1,17 @@
+.sidebar {
+	margin-right: 16px;
+	min-width: 120px;
+
+	h2 {
+		font-size: 20px;
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			margin: 4px 0;
+		}
+	}
+}

@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import Video from '../components/Video';
-import Header from '../components/Header';
+import Header from '../components/molecules/Header';
 
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import CourseNavigator from '../components/molecules/CourseNavigator';
+import ModuleContainer from '../components/organisms/ModuleView';
+import ModuleSelector from '../components/organisms/ModuleSelector';
+
+import './index.css';
 
 export default class Index extends Component {
 	render() {
-		const { state } = this.props;
+		const { data, state, updateState } = this.props;
+		console.log(state);
+
+		let currentCourse = data.courses.filter((course) => course.id === state.activeCourse);
+		currentCourse = currentCourse[0];
+		let currentModule = currentCourse.modules.filter((module) => module.id === state.activeModule);
+		currentModule = currentModule[0];
 
 		return (
-			<div>
-				<Header course={state.course} user={state.user} />
+			<div id="page--index">
+				<Header user={data.user} />
 				<div className="container main">
-					<Breadcrumb>
-						<BreadcrumbItem>
-							<a href="#">Courses</a>
-						</BreadcrumbItem>
-						<BreadcrumbItem>{state.course.title}</BreadcrumbItem>
-						<BreadcrumbItem active>{state.course.module.title}</BreadcrumbItem>
-					</Breadcrumb>
-					<Video url="www.youtube.com/watch?v=b5H3b_Hh0Lw" />
+					<CourseNavigator course={currentCourse} module={currentModule} />
+					<div className="courseware">
+						<ModuleSelector updateState={updateState} course={currentCourse} module={currentModule} />
+						<ModuleContainer module={currentModule} />
+					</div>
 				</div>
 			</div>
 		);
