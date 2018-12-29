@@ -9,16 +9,21 @@ import './index.css';
 
 export default class Index extends Component {
 	render() {
-		const { state } = this.props;
+		const { data, state } = this.props;
+
+		let currentCourse = data.courses.filter((course) => course.id === state.activeCourse);
+		currentCourse = currentCourse[0];
+		let currentModule = currentCourse.modules.filter((module) => module.id === state.activeModule);
+		currentModule = currentModule[0];
 
 		return (
 			<div id="page--index">
-				<Header user={state.user} />
+				<Header user={data.user} />
 				<div className="container main">
-					<CourseNavigator course={state.course} />
+					<CourseNavigator course={currentCourse} module={currentModule} />
 					<div className="courseware">
-						<ModuleSelector course={state.course} />
-						<ModuleContainer module={state.course.module} />
+						<ModuleSelector course={currentCourse} />
+						<ModuleContainer module={currentModule} />
 					</div>
 				</div>
 			</div>
