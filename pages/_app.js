@@ -25,7 +25,7 @@ export default class MyApp extends App {
 
 		return (
 			<Container>
-				<Component {...pageProps} state={this.state} data={mockData} />
+				<Component {...pageProps} updateState={this.updateState} state={this.state} data={mockData} />
 			</Container>
 		);
 	}

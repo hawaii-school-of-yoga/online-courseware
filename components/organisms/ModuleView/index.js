@@ -7,8 +7,6 @@ import './moduleView.scss';
 export default class ModuleView extends Component {
 	render() {
 		const { module } = this.props;
-		console.log(module);
-
 		return (
 			<div className="courseware">
 				<div className="module--container">

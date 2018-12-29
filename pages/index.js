@@ -9,7 +9,8 @@ import './index.css';
 
 export default class Index extends Component {
 	render() {
-		const { data, state } = this.props;
+		const { data, state, updateState } = this.props;
+		console.log(state);
 
 		let currentCourse = data.courses.filter((course) => course.id === state.activeCourse);
 		currentCourse = currentCourse[0];
@@ -22,7 +23,7 @@ export default class Index extends Component {
 				<div className="container main">
 					<CourseNavigator course={currentCourse} module={currentModule} />
 					<div className="courseware">
-						<ModuleSelector course={currentCourse} />
+						<ModuleSelector updateState={updateState} course={currentCourse} module={currentModule} />
 						<ModuleContainer module={currentModule} />
 					</div>
 				</div>
