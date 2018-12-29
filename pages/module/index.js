@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Main from '../../components/templates/Main';
 
 import ModuleContainer from '../../components/organisms/ModuleView';
 import ModuleSelector from '../../components/organisms/ModuleSelector';
+
+import Main from '../../components/templates/Main';
 
 export default class Modules extends Component {
 	render() {

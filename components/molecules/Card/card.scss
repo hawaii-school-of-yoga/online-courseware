@@ -1,0 +1,32 @@
+.card-container {
+	display: flex;
+	flex-direction: column;
+	.card {
+		margin: 8px;
+		max-width: 350px;
+		h5 {
+			&.card-title {
+				font-size: 28px;
+				margin-bottom: 8px;
+			}
+		}
+
+		h6 {
+			&.card-subtitle {
+				font-weight: 500 !important;
+				margin-bottom: 12px;
+			}
+		}
+
+		p {
+			font-weight: 300;
+			font-size: 95%;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.card-container {
+		flex-direction: row;
+	}
+}

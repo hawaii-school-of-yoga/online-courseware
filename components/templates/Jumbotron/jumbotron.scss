@@ -1,0 +1,27 @@
+.jumbotron {
+	padding: 0;
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		font-size: 32px;
+		line-height: 12px;
+		margin-bottom: 24px;
+	}
+
+	p {
+		&.lead {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.jumbotron {
+		h1 {
+			font-size: 48px;
+		}
+	}
+}

@@ -29,7 +29,13 @@
 
 	h1 {
 		font-size: 28px;
-		line-height: 12px;
+		line-height: 24px;
+	}
+
+	h2 {
+		font-size: 14px;
+		font-family: unset;
+		font-weight: 200;
 	}
 }
 
@@ -51,7 +57,7 @@
 @media (min-width: 425px) {
 	.title-bar h1 {
 		font-size: 28px;
-		line-height: 18px;
+		line-height: 24px;
 	}
 }
 
@@ -75,9 +81,15 @@
 		text-align: left;
 	}
 
-	.title-bar h1 {
-		font-size: 54px;
-		line-height: 38px;
+	.title-bar {
+		h1 {
+			font-size: 54px;
+			line-height: 48px;
+		}
+
+		h2 {
+			font-size: 18px;
+		}
 	}
 
 	.user-bar {

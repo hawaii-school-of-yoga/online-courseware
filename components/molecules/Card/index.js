@@ -1,18 +1,38 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+import {
+	Card,
+	CardImg,
+	CardText,
+	CardBody,
+	CardTitle,
+	CardSubtitle,
+} from 'reactstrap';
 
-export default ({ id, thumbnail, title, subtitle, text, ActionButtons }) => {
+import './card.scss';
+
+import { trimAndAppend } from '../../../helpers/strings';
+
+export default ({
+	id,
+	thumbnail,
+	title,
+	subtitle,
+	description,
+	additional,
+	ActionButtons,
+}) => {
 	return (
-		<div>
-			<Card>
-				<CardImg top width="100%" src={thumbnail} alt="Card image cap" />
-				<CardBody>
-					<CardTitle>{title}</CardTitle>
-					<CardSubtitle>{subtitle}</CardSubtitle>
-					<CardText>{text}</CardText>
-					<ActionButtons />
-				</CardBody>
-			</Card>
-		</div>
+		<Card>
+			<CardImg top width="100%" src={thumbnail} alt="Card image cap" />
+			<CardBody>
+				<CardTitle>{title}</CardTitle>
+				<CardSubtitle>{subtitle}</CardSubtitle>
+				<CardText>
+					<p>{trimAndAppend(description, 180, '...')}</p>
+					<span>{additional}</span>
+				</CardText>
+				<ActionButtons />
+			</CardBody>
+		</Card>
 	);
 };

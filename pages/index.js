@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Router from 'next/router';
 
 import styles from '../components/_css';
-import './index.scss';
 
 import Button from '../components/atoms/Button';
 import Card from '../components/molecules/Card';
@@ -26,7 +25,7 @@ export default class Module extends Component {
 							dui quam, mollis a rutrum eu, fermentum a urna. Proin vitae velit
 							sapien.">
 						<h2>Available Courses</h2>
-						<div className="courses">
+						<div className="card-container">
 							{data.courses.map(({ id, modules, ...props }) => (
 								<Card
 									ActionButtons={() => (
@@ -43,7 +42,7 @@ export default class Module extends Component {
 									)}
 									updateState={updateState}
 									key={id}
-									text={`Modules: ${modules.length}`}
+									additional={`Modules: ${modules.length}`}
 									{...props}
 								/>
 							))}
