@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Button } from 'reactstrap';
 import './header.css';
-import styles from '../_css';
+import styles from '../../_css';
 
 export default class Header extends Component {
 	render() {

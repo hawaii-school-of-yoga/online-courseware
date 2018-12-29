@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Video from '../components/Video';
-import Header from '../components/Header';
+import Video from '../components/atoms/Video';
+import Header from '../components/molecules/Header';
 
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
@@ -19,7 +19,12 @@ export default class Index extends Component {
 						<BreadcrumbItem>{state.course.title}</BreadcrumbItem>
 						<BreadcrumbItem active>{state.course.module.title}</BreadcrumbItem>
 					</Breadcrumb>
-					<Video url="www.youtube.com/watch?v=b5H3b_Hh0Lw" />
+					<div className="courseware">
+						<div className="sidebar">Sidebar</div>
+						<div className="video-container">
+							<Video url="https://www.youtube.com/watch?v=duQ9_578RKw" />
+						</div>
+					</div>
 				</div>
 			</div>
 		);
