@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'Hello Tropical';
+	src: url('/static/fonts/HelloTropical.woff2') format('woff2'),
+		url('/static/fonts/HelloTropical.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	background: url(/static/img/bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Hello Tropical";
+	font-size: 200%;
+}
+
+.button-group .btn {
+	margin: 2px !important;
+}
+
+.container.main {
+	margin-top: 16px;
+}
+
+hr {
+	width: 50px;
+	height: 2px;
+	margin: 8px 0;
+	border: 0;
+
+	&.primary {
+		background: #007bff;
+	}
+}

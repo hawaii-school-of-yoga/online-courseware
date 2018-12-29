@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
@@ -8,10 +9,10 @@ export default class CourseNavigator extends Component {
 		return (
 			<Breadcrumb>
 				<BreadcrumbItem>
-					<a href="#">Courses</a>
+					<Link href="/">
+						<a>Courses</a>
+					</Link>
 				</BreadcrumbItem>
-				<BreadcrumbItem>{course.title}</BreadcrumbItem>
-				<BreadcrumbItem active>{module.title}</BreadcrumbItem>
 			</Breadcrumb>
 		);
 	}

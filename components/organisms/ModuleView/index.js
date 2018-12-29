@@ -12,6 +12,7 @@ export default class ModuleView extends Component {
 				<div className="module--container">
 					<div className="module--info">
 						<h2>{module.title}</h2>
+						<hr className="primary" />
 						<p>{module.description}</p>
 					</div>
 
