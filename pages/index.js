@@ -20,10 +20,12 @@ export default class Module extends Component {
 					<div className="jumbotron">
 						<h1>Hawaii School of Yoga Online Course Portal</h1>
 						<p className="lead">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget sapien sed tortor
-							lobortis tempus nec quis libero. Suspendisse potenti. Phasellus id vehicula metus. Praesent
-							pretium mauris ac pretium ultricies. Nulla gravida ornare eleifend. Nulla dui quam, mollis a
-							rutrum eu, fermentum a urna. Proin vitae velit sapien.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+							eget sapien sed tortor lobortis tempus nec quis libero.
+							Suspendisse potenti. Phasellus id vehicula metus. Praesent pretium
+							mauris ac pretium ultricies. Nulla gravida ornare eleifend. Nulla
+							dui quam, mollis a rutrum eu, fermentum a urna. Proin vitae velit
+							sapien.
 						</p>
 						<h2>Available Courses</h2>
 						<div className="courses">
@@ -33,9 +35,10 @@ export default class Module extends Component {
 										<div className="button-group">
 											<Button
 												onClick={() =>
-													updateState('activeCourse', id, () => Router.push('/module/'))}
-												color="primary"
-											>
+													updateState('activeCourse', id, () =>
+														Router.push('/module/'),
+													)}
+												color="primary">
 												View Course
 											</Button>
 										</div>

@@ -11,14 +11,7 @@ export default class Modules extends Component {
 
 		return (
 			<div id="page--modules">
-				<Main updateState={updateState} user={data.user} state={state}>
-					<ModuleSelector
-						updateState={updateState}
-						course={course}
-						module={module}
-					/>
-					<ModuleContainer module={module} />
-				</Main>
+				<Main updateState={updateState} user={data.user} state={state} />
 			</div>
 		);
 	}
