@@ -16,6 +16,9 @@ export default class MyApp extends App {
 		return { pageProps };
 	}
 
+	selectCourse = () => {};
+	selectModuel = () => {};
+
 	render() {
 		const { Component, pageProps } = this.props;
 

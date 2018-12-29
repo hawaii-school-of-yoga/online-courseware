@@ -1,29 +1,24 @@
 import React, { Component } from 'react';
-import Video from '../components/atoms/Video';
 import Header from '../components/molecules/Header';
 
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import CourseNavigator from '../components/molecules/CourseNavigator';
+import ModuleContainer from '../components/organisms/ModuleView';
+import ModuleSelector from '../components/organisms/ModuleSelector';
+
+import './index.css';
 
 export default class Index extends Component {
 	render() {
 		const { state } = this.props;
 
 		return (
-			<div>
-				<Header course={state.course} user={state.user} />
+			<div id="page--index">
+				<Header user={state.user} />
 				<div className="container main">
-					<Breadcrumb>
-						<BreadcrumbItem>
-							<a href="#">Courses</a>
-						</BreadcrumbItem>
-						<BreadcrumbItem>{state.course.title}</BreadcrumbItem>
-						<BreadcrumbItem active>{state.course.module.title}</BreadcrumbItem>
-					</Breadcrumb>
+					<CourseNavigator course={state.course} />
 					<div className="courseware">
-						<div className="sidebar">Sidebar</div>
-						<div className="video-container">
-							<Video url="https://www.youtube.com/watch?v=duQ9_578RKw" />
-						</div>
+						<ModuleSelector course={state.course} />
+						<ModuleContainer module={state.course.module} />
 					</div>
 				</div>
 			</div>

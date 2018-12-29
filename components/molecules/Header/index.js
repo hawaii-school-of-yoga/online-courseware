@@ -6,7 +6,7 @@ import styles from '../../_css';
 
 export default class Header extends Component {
 	render() {
-		const { course, user } = this.props;
+		const { user } = this.props;
 
 		return (
 			<nav className="navbar">
