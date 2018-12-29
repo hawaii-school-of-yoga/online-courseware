@@ -40,9 +40,12 @@ export default class MyApp extends App {
 	}
 
 	updateState = (key, value, customCb) => {
-		this.setState({ [key]: value }, () => {
+		this.setState({ [key]: value }, function() {
 			window.localStorage.setItem('hsyonline', JSON.stringify(this.state));
-			customCb();
+
+			if (customCb) {
+				customCb();
+			}
 		});
 	};
 

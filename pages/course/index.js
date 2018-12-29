@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Router from 'next/router';
 
 import Button from '../../components/atoms/Button';
 
@@ -33,7 +34,7 @@ export default class Modules extends Component {
 										<div className="button-group">
 											<Button
 												onClick={() =>
-													updateState('activeCourse', id, () =>
+													updateState('activeModule', id, () =>
 														Router.push('/module/'),
 													)}
 												color={id === module.id ? 'success' : 'primary'}
