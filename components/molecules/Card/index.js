@@ -20,12 +20,13 @@ export default ({
 	description,
 	additional,
 	ActionButtons,
+	active,
 }) => {
 	return (
-		<Card>
+		<Card className={active && 'active'}>
 			<CardImg top width="100%" src={thumbnail} alt="Card image cap" />
 			<CardBody>
-				<CardTitle>{title}</CardTitle>
+				<CardTitle>{trimAndAppend(title, 24, '')}</CardTitle>
 				<CardSubtitle>{subtitle}</CardSubtitle>
 				<CardText>
 					<p>{trimAndAppend(description, 180, '...')}</p>

@@ -3,6 +3,8 @@ import App, { Container } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mockData from '../prototype-mocks.json';
 
+import Loading from '../components/atoms/Loading';
+
 import '../styles/index.scss';
 import '../styles/bootstrap.scss';
 
@@ -46,7 +48,7 @@ export default class MyApp extends App {
 
 	render() {
 		if (this.state.loading) {
-			return <div>Loading!</div>;
+			return <Loading />;
 		}
 
 		const { Component, pageProps } = this.props;

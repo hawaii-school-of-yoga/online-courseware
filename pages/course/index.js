@@ -28,6 +28,7 @@ export default class Modules extends Component {
 							{course.modules.map(({ id, modules, ...props }) => (
 								<Card
 									{...props}
+									active={id === module.id}
 									ActionButtons={() => (
 										<div className="button-group">
 											<Button
@@ -35,8 +36,10 @@ export default class Modules extends Component {
 													updateState('activeCourse', id, () =>
 														Router.push('/module/'),
 													)}
-												color="primary">
-												Start Module // TODO: start, resume, etc?
+												color={id === module.id ? 'success' : 'primary'}
+												disabled={id > module.id}>
+												{/* // TODO: start, resume, etc? */}
+												View Module
 											</Button>
 										</div>
 									)}
