@@ -35,7 +35,7 @@ export default class Module extends Component {
 										<div className="button-group">
 											<Button
 												onClick={() =>
-													updateState('activeCourse', id, () => Router.push('/course'))}
+													updateState('activeCourse', id, () => Router.push('/module/'))}
 												color="primary"
 											>
 												View Course
