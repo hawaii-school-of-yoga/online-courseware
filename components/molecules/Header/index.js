@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Button } from 'reactstrap';
-import './header.css';
+import './header.scss';
 import styles from '../../_css';
 
 export default class Header extends Component {
@@ -16,10 +16,7 @@ export default class Header extends Component {
 					</div>
 					<div className="title-bar">
 						<h1>Hawaii School of Yoga</h1>
-						<div className="mantra">
-							<img className="aum" src="/static/img/aum.png" />
-							<h4 className="lokah">लोकाः समस्ताः सुखिनो भवन्तु</h4>
-						</div>
+						<h2>Online Wisdom Portal</h2>
 					</div>
 					<div className="user-bar">
 						<img src={user.img} />

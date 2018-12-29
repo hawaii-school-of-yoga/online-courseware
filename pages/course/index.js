@@ -10,8 +10,10 @@ export default class Modules extends Component {
 		const { course, module } = state;
 
 		return (
-			<div id="page--modules">
-				<Main updateState={updateState} user={data.user} state={state} />
+			<div id="page--course">
+				<Main updateState={updateState} user={data.user} state={state}>
+					<div>Hello, world. I'm a course page!</div>
+				</Main>
 			</div>
 		);
 	}

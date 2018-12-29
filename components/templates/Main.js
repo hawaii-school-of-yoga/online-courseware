@@ -4,8 +4,6 @@ import Footer from '../../components/atoms/Footer';
 
 import CourseNavigator from '../../components/molecules/CourseNavigator';
 
-import './main.scss';
-
 export default class Main extends Component {
 	render() {
 		const { user, state, updateState } = this.props;
@@ -17,7 +15,7 @@ export default class Main extends Component {
 
 				<div className="container main">
 					<CourseNavigator course={course} module={module} />
-					<div className="courseware">{this.props.children}</div>
+					<div className="flex-container">{this.props.children}</div>
 				</div>
 
 				<Footer />

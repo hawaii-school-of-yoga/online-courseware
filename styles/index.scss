@@ -45,3 +45,17 @@ hr {
 		background: #007bff;
 	}
 }
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(233, 236, 239);
+	padding: .75rem 1rem;
+	border-radius: .25rem;
+}
+
+@media (min-width: 768px) {
+	.flex-container {
+		flex-direction: row;
+	}
+}
