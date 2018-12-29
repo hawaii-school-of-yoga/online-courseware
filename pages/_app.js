@@ -24,9 +24,14 @@ export default class MyApp extends App {
 	render() {
 		const { Component, pageProps } = this.props;
 
-		let currentCourse = mockData.courses.filter((course) => course.id === this.state.activeCourse);
+		let currentCourse = mockData.courses.filter(
+			(course) => course.id === this.state.activeCourse
+		);
 		currentCourse = currentCourse[0];
-		let currentModule = currentCourse.modules.filter((module) => module.id === this.state.activeModule);
+
+		let currentModule = currentCourse.modules.filter(
+			(module) => module.id === this.state.activeModule
+		);
 		currentModule = currentModule[0];
 
 		const state = {
@@ -36,7 +41,12 @@ export default class MyApp extends App {
 
 		return (
 			<Container>
-				<Component {...pageProps} state={state} updateState={this.updateState} data={mockData} />
+				<Component
+					{...pageProps}
+					state={state}
+					updateState={this.updateState}
+					data={mockData}
+				/>
 			</Container>
 		);
 	}
