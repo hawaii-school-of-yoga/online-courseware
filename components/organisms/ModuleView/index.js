@@ -8,7 +8,7 @@ export default class ModuleView extends Component {
 	render() {
 		const { module } = this.props;
 		return (
-			<div className="courseware">
+			<div className="module">
 				<div className="module--container">
 					<div className="module--info">
 						<h2>{module.title}</h2>

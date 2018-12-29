@@ -1,6 +1,8 @@
+$min-width: 100%;
+
 .sidebar {
-	margin-right: 16px;
-	min-width: 120px;
+	margin-right: 8px;
+	min-width: $min-width;
 
 	h2 {
 		font-size: 20px;
@@ -12,6 +14,27 @@
 
 		li {
 			margin: 4px 0;
+
+			.btn {
+				min-width: $min-width;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	$min-width: 180px;
+
+	.sidebar {
+		min-width: $min-width;
+		margin-right: 16px;
+
+		ul {
+			li {
+				.btn {
+					min-width: $min-width;
+				}
+			}
 		}
 	}
 }
