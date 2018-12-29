@@ -1,7 +1,6 @@
-import button from './button';
-
 const styles = {
-	button
+	button: require('./button'),
+	card: require('./card')
 };
 
 export default styles;

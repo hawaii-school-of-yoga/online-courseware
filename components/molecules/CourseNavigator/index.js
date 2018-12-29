@@ -10,8 +10,6 @@ export default class CourseNavigator extends Component {
 				<BreadcrumbItem>
 					<a href="#">Courses</a>
 				</BreadcrumbItem>
-				<BreadcrumbItem>{course.title}</BreadcrumbItem>
-				<BreadcrumbItem active>{module.title}</BreadcrumbItem>
 			</Breadcrumb>
 		);
 	}
