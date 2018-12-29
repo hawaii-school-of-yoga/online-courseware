@@ -3,7 +3,7 @@ import App, { Container } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mockData from '../prototype-mocks.json';
 
-import '../styles/index.css';
+import '../styles/index.scss';
 
 export default class MyApp extends App {
 	state = { activeCourse: 1, activeModule: 1 };
