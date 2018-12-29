@@ -1,9 +1,7 @@
 import button from './button';
-import card from './card';
 
 const styles = {
-	button,
-	card
+	button
 };
 
 export default styles;

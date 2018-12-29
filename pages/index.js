@@ -8,6 +8,8 @@ import Card from '../components/molecules/Card';
 
 import './index.scss';
 
+import styles from '../components/_css';
+
 export default class Module extends Component {
 	render() {
 		const { data, state, updateState } = this.props;
@@ -16,7 +18,7 @@ export default class Module extends Component {
 			<div id="page--index">
 				<Main state={state} user={data.user}>
 					<div className="jumbotron">
-						<h1 className="display-4">Hawaii School of Yoga Online Courses</h1>
+						<h1>Hawaii School of Yoga Online Course Portal</h1>
 						<p className="lead">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget sapien sed tortor
 							lobortis tempus nec quis libero. Suspendisse potenti. Phasellus id vehicula metus. Praesent
