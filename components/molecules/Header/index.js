@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 
 import { Button } from 'reactstrap';
 import './header.scss';
@@ -12,7 +13,9 @@ export default class Header extends Component {
 			<nav className="navbar">
 				<div className="container">
 					<div className="logo-bar">
-						<img className="logo" src="/static/img/logo-no-text.png" />
+						<Link href="/">
+							<img className="logo" src="/static/img/logo-no-text.png" />
+						</Link>
 					</div>
 					<div className="title-bar">
 						<h1>Hawaii School of Yoga</h1>

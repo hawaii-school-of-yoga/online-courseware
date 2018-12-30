@@ -20,7 +20,7 @@ export default class ModuleSelector extends Component {
 								size="sm"
 								onClick={() => updateState('activeModule', id)}
 								color={id === module.id ? 'primary' : 'secondary'}
-							>
+								disabled={id !== module.id}>
 								{moduleId} - {title}
 							</Button>
 						</li>
