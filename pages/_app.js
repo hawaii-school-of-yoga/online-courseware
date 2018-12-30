@@ -40,12 +40,15 @@ export default class MyApp extends App {
 	}
 
 	updateState = (key, value, customCb) => {
+		this.setState({ loading: true });
 		this.setState({ [key]: value }, function() {
 			window.localStorage.setItem('hsyonline', JSON.stringify(this.state));
 
 			if (customCb) {
 				customCb();
 			}
+
+			this.setState({ loading: false });
 		});
 	};
 
