@@ -11,20 +11,24 @@ export default class CourseNavigator extends Component {
 
 		const courseCrumb = (
 			<BreadcrumbItem>
-				<Link href="/course">{course.title}</Link>
+				<Link prefetch href="/course">
+					<a>{course.title}</a>
+				</Link>
 			</BreadcrumbItem>
 		);
 
 		const moduleCrumb = (
 			<BreadcrumbItem>
-				<Link href="/module">{module.title}</Link>
+				<Link prefetch href="/module">
+					<a>{module.title}</a>
+				</Link>
 			</BreadcrumbItem>
 		);
 
 		return (
 			<Breadcrumb>
 				<BreadcrumbItem>
-					<Link href="/">
+					<Link prefetch href="/">
 						<a>Courses</a>
 					</Link>
 				</BreadcrumbItem>

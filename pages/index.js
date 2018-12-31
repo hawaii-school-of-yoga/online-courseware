@@ -33,7 +33,7 @@ export default class Module extends Component {
 											<Button
 												onClick={() =>
 													updateState('activeCourse', id, () =>
-														Router.push('/course/'),
+														Router.push('/course'),
 													)}
 												color="primary">
 												View Course

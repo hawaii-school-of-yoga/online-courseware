@@ -35,11 +35,10 @@ export default class Modules extends Component {
 											<Button
 												onClick={() =>
 													updateState('activeModule', id, () =>
-														Router.push('/module/'),
+														Router.push('/module'),
 													)}
 												color={id === module.id ? 'success' : 'primary'}
 												disabled={id > module.id}>
-												{/* // TODO: start, resume, etc? */}
 												View Module
 											</Button>
 										</div>

@@ -28,10 +28,8 @@ export default ({
 			<CardBody>
 				<CardTitle>{trimAndAppend(title, 24, '')}</CardTitle>
 				<CardSubtitle>{subtitle}</CardSubtitle>
-				<CardText>
-					<p>{trimAndAppend(description, 180, '...')}</p>
-					<span>{additional}</span>
-				</CardText>
+				<CardText>{trimAndAppend(description, 180, '...')}</CardText>
+				<CardText>{additional}</CardText>
 				<ActionButtons />
 			</CardBody>
 		</Card>

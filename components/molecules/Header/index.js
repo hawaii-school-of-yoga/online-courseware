@@ -13,8 +13,10 @@ export default class Header extends Component {
 			<nav className="navbar">
 				<div className="container">
 					<div className="logo-bar">
-						<Link href="/">
-							<img className="logo" src="/static/img/logo-no-text.png" />
+						<Link prefetch href="/">
+							<a>
+								<img className="logo" src="/static/img/logo-no-text.png" />
+							</a>
 						</Link>
 					</div>
 					<div className="title-bar">
