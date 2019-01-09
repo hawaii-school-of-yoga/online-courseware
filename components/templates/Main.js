@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Router from 'next/router';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import Header from '../../components/molecules/Header';
 import Footer from '../../components/atoms/Footer';
 
@@ -14,8 +17,10 @@ export default class Main extends Component {
 				<Header user={user} />
 
 				<div className="container main">
-					<CourseNavigator course={course} module={module} />
-					<div className="flex-container">{this.props.children}</div>
+					<div>
+						<CourseNavigator course={course} module={module} />
+						<div className="flex-container">{this.props.children}</div>
+					</div>
 				</div>
 
 				<Footer />

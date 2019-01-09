@@ -1,5 +1,7 @@
 import React from 'react';
+
 import App, { Container } from 'next/app';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mocks from '../mocks';
 
@@ -59,8 +61,6 @@ export default class MyApp extends App {
 
 		const { Component, pageProps } = this.props;
 
-		console.log(mocks);
-
 		let currentCourse = mocks.courses.filter(
 			(course) => course.id === this.state.activeCourse,
 		);
@@ -78,12 +78,19 @@ export default class MyApp extends App {
 
 		return (
 			<Container>
-				<Component
-					{...pageProps}
-					state={state}
-					updateState={this.updateState}
-					data={mocks}
-				/>
+				<TransitionGroup>
+					<CSSTransition
+						key={this.props.router.route}
+						classNames="fade"
+						timeout={2000}>
+						<Component
+							{...pageProps}
+							state={state}
+							updateState={this.updateState}
+							data={mocks}
+						/>
+					</CSSTransition>
+				</TransitionGroup>
 			</Container>
 		);
 	}
