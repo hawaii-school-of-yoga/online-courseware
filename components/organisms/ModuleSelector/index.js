@@ -14,10 +14,7 @@ export default class ModuleSelector extends Component {
 
 		return (
 			<div className="sidebar">
-				<h2>{course.title}</h2>
-				<hr className="primary" />
-
-				<ProgressBar />
+				<ProgressBar percent={courseProgressInt} />
 
 				<ul>
 					{course.modules.map(({ moduleId, id, title }) => (

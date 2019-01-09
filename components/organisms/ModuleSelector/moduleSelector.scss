@@ -8,21 +8,6 @@ $min-width: 100%;
 		font-size: 28px;
 	}
 
-	.progress-bar-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		span {
-			margin-right: auto;
-			padding-right: 8px;
-		}
-
-		.progress {
-			width: 100%;
-		}
-	}
-
 	ul {
 		list-style: none;
 		padding-left: 0;
@@ -42,7 +27,6 @@ $min-width: 100%;
 
 	.sidebar {
 		min-width: $min-width;
-		margin-right: 16px;
 
 		ul {
 			li {

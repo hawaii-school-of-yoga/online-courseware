@@ -1,10 +1,16 @@
 .breadcrumb {
-	flex-direction: column;
 	background: white;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
-	content: "-";
+@media (min-width: 768px) {
+	.breadcrumb {
+		flex-direction: row;
+		background: white;
+	}
+
+	.breadcrumb-item + .breadcrumb-item::before {
+		content: "/";
+	}
 }
 
 .breadcrumb-item.active {
@@ -13,4 +19,12 @@
 
 .card-body .card-subtitle {
 	font-weight: 300 !important;
+}
+
+hr {
+	height: 1px;
+}
+
+hr.full {
+	width: 100%;
 }
