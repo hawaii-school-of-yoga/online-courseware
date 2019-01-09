@@ -1,7 +1,7 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mockData from '../prototype-mocks.json';
+import mocks from '../mocks';
 
 import Loading from '../components/atoms/Loading';
 
@@ -59,7 +59,9 @@ export default class MyApp extends App {
 
 		const { Component, pageProps } = this.props;
 
-		let currentCourse = mockData.courses.filter(
+		console.log(mocks);
+
+		let currentCourse = mocks.courses.filter(
 			(course) => course.id === this.state.activeCourse,
 		);
 		currentCourse = currentCourse[0];
@@ -80,7 +82,7 @@ export default class MyApp extends App {
 					{...pageProps}
 					state={state}
 					updateState={this.updateState}
-					data={mockData}
+					data={mocks}
 				/>
 			</Container>
 		);

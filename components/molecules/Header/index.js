@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 
+import Star from '../../atoms/Star';
+
 import { Button } from 'reactstrap';
 import './header.scss';
 import styles from '../../_css';
@@ -27,9 +29,12 @@ export default class Header extends Component {
 						<img src={user.img} />
 						<div className="info-container">
 							<h4>{user.name}</h4>
+							{/* <div className="star-power">
+								{user.stars.map(({ star }) => <Star type={star.type} />)}>
+							</div> */}
 							<div className="button-group">
 								<Button style={styles.button.xs} color="success">
-									Settings
+									My Profile
 								</Button>
 								<Button style={styles.button.xs} color="danger">
 									Logout
