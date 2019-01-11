@@ -1,6 +1,9 @@
 .navbar {
 	background: rgba(0, 0, 0, 0.22);
-	padding: 0px 8px 8px 8px;
+
+	.container {
+		padding: 0 15px;
+	}
 }
 
 .navbar .container,
@@ -64,53 +67,53 @@
 @media (min-width: 768px) {
 	.navbar {
 		padding: 0;
-	}
 
-	.navbar .container {
-		justify-content: flex-start;
-		padding: 16px 0;
-	}
-
-	.logo {
-		width: 54px;
-	}
-
-	.title-bar {
-		padding: 0 0 0 16px;
-		margin: 0;
-		text-align: left;
-	}
-
-	.title-bar {
-		h1 {
-			font-size: 38px;
-			line-height: 34px;
+		.container {
+			justify-content: flex-start;
+			padding: 16px;
 		}
 
-		h2 {
-			font-size: 14px;
+		.logo {
+			width: 54px;
 		}
-	}
 
-	.user-bar {
-		margin-left: auto;
-	}
+		.title-bar {
+			padding: 0 0 0 16px;
+			margin: 0;
+			text-align: left;
+		}
 
-	.user-bar img {
-		width: 54px;
-		height: 54px;
-		border-radius: 27px;
-	}
+		.title-bar {
+			h1 {
+				font-size: 38px;
+				line-height: 34px;
+			}
 
-	.info-container {
-		display: block;
-		padding-left: 8px;
-	}
+			h2 {
+				font-size: 14px;
+			}
+		}
 
-	.user-bar h4 {
-		color: white;
-		font-weight: 100;
-		font-size: 24px;
-		margin-bottom: 0;
+		.user-bar {
+			margin-left: auto;
+		}
+
+		.user-bar img {
+			width: 54px;
+			height: 54px;
+			border-radius: 27px;
+		}
+
+		.info-container {
+			display: block;
+			padding-left: 8px;
+		}
+
+		.user-bar h4 {
+			color: white;
+			font-weight: 100;
+			font-size: 24px;
+			margin-bottom: 0;
+		}
 	}
 }

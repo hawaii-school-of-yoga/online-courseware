@@ -1,6 +1,7 @@
 import React from 'react';
 
 import App, { Container } from 'next/app';
+import Router from 'next/router';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mocks from '../mocks';
@@ -11,10 +12,15 @@ import '../styles/index.scss';
 import '../styles/bootstrap.scss';
 
 const defaultState = {
+	userGroup: 0,
 	activeCourse: 1,
 	activeModule: 1,
 	loading: true,
 };
+
+Router.events.on('routeChangeComplete', () => {
+	window.scrollTo(0, 0);
+});
 
 export default class MyApp extends App {
 	state = defaultState;
@@ -41,7 +47,7 @@ export default class MyApp extends App {
 		return { pageProps };
 	}
 
-	updateState = (key, value, customCb) => {
+	updateState = (key, value, customCb = null) => {
 		this.setState({ loading: true });
 		this.setState({ [key]: value }, function() {
 			window.localStorage.setItem('hsyonline', JSON.stringify(this.state));

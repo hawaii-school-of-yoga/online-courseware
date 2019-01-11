@@ -18,13 +18,9 @@ export default class Module extends Component {
 				<Main state={state} user={data.user}>
 					<Jumbotron
 						title="Hawaii School of Yoga Online Course Portal"
-						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-							eget sapien sed tortor lobortis tempus nec quis libero.
-							Suspendisse potenti. Phasellus id vehicula metus. Praesent pretium
-							mauris ac pretium ultricies. Nulla gravida ornare eleifend. Nulla
-							dui quam, mollis a rutrum eu, fermentum a urna. Proin vitae velit
-							sapien.">
-						<h2>Available Courses</h2>
+						description="Hawaii School of Yoga now offers quality online courseware for you to take anywhere with you that you have a device. Access to a beautiful of blend of ancient and modern yogic and tantric teachings including Spiritual Teachings, History, Philosophy, Hinduism and the Indian Spiritual Traditions Sanskrit, Mantra, Ayurveda, Kundalini Studies, and Tantra has never been more accessible. Check out our course catalog below.">
+						<h2>Course Catalog</h2>
+						<hr class="primary" />
 						<div className="card-container">
 							{data.courses.map(({ id, modules, ...props }) => (
 								<Card
@@ -33,16 +29,29 @@ export default class Module extends Component {
 											<Button
 												onClick={() =>
 													updateState('activeCourse', id, () =>
+														Router.push('/module'),
+													)}
+												color="success">
+												Get Started
+											</Button>
+											<Button
+												onClick={() =>
+													updateState('activeCourse', id, () =>
 														Router.push('/course'),
 													)}
+												outline
 												color="primary">
-												View Course
+												Information
 											</Button>
 										</div>
 									)}
 									updateState={updateState}
 									key={id}
-									additional={`Modules: ${modules.length}`}
+									additional={
+										<div>
+											<span>Modules: {modules.length}</span>
+										</div>
+									}
 									{...props}
 								/>
 							))}
