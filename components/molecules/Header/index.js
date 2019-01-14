@@ -9,7 +9,7 @@ import styles from '../../_css';
 
 export default class Header extends Component {
 	render() {
-		const { user } = this.props;
+		const { user, updateState } = this.props;
 
 		return (
 			<nav className="navbar">
@@ -36,7 +36,10 @@ export default class Header extends Component {
 								<Button style={styles.button.xs} color="success">
 									My Profile
 								</Button>
-								<Button style={styles.button.xs} color="danger">
+								<Button
+									style={styles.button.xs}
+									color="danger"
+									onClick={() => this.props.updateState('track', '')}>
 									Logout
 								</Button>
 							</div>

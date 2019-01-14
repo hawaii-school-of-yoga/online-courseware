@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 
+import './signup.scss';
+
 export default class SignupForm extends Component {
 	handleSubmit = () => {
 		// TODO: registration, signup call

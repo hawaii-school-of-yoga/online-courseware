@@ -1,14 +1,22 @@
 #page {
-	&--index {
+	&--signup {
 		height: 100vh;
 
 		.container {
 			background: rgba(0, 0, 0, 0.33);
+			height: 100vh;
+
+			&.small {
+				background: none;
+			}
 		}
 
-		.container,
-		.form-signin {
-			height: 100%;
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			overflow-y: scroll;
 		}
 
 		.form-signin {

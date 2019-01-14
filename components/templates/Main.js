@@ -14,7 +14,7 @@ export default class Main extends Component {
 
 		return (
 			<div id="template--main">
-				<Header user={user} />
+				<Header user={user} updateState={updateState} />
 
 				<div className="container main">
 					<div>

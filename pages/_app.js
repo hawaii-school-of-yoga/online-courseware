@@ -12,7 +12,7 @@ import '../styles/index.scss';
 import '../styles/bootstrap.scss';
 
 const defaultState = {
-	user: 0,
+	track: 0,
 	activeCourse: 1,
 	activeModule: 1,
 	loading: true,
@@ -48,6 +48,7 @@ export default class MyApp extends App {
 	}
 
 	updateState = (key, value, customCb = null) => {
+		console.log(key, value);
 		this.setState({ loading: true });
 		this.setState({ [key]: value }, function() {
 			window.localStorage.setItem('hsyonline', JSON.stringify(this.state));
@@ -61,7 +62,7 @@ export default class MyApp extends App {
 	};
 
 	render() {
-		const { loading, user } = this.state;
+		const { loading, track } = this.state;
 
 		if (loading) {
 			return <Loading />;
@@ -83,7 +84,7 @@ export default class MyApp extends App {
 		const state = {
 			course: currentCourse,
 			module: currentModule,
-			user,
+			track,
 		};
 
 		return (

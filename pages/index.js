@@ -11,20 +11,27 @@ import Jumbotron from '../components/templates/Jumbotron';
 import SignupWizard from '../components/organisms/SignupWizard';
 
 export default class Module extends Component {
-	renderMain = (user) => {
-		if (user) {
-			return (
-				<Main state={state} user={data.user}>
+	renderMain = (data, state, updateState) => {
+		const { user, courses } = data;
+		const { track } = state;
+
+		let PAGE = '';
+		let COMPONENT = '';
+
+		if (track) {
+			PAGE = 'index';
+			COMPONENT = (
+				<Main state={state} user={user} updateState={updateState}>
 					<Jumbotron
 						title="Hawaii School of Yoga Online Course Portal"
 						description="Hawaii School of Yoga now offers quality online courseware for you to take anywhere with you that you have a device. Access to a beautiful of blend of ancient and modern yogic and tantric teachings including Spiritual Teachings, History, Philosophy, Hinduism and the Indian Spiritual Traditions Sanskrit, Mantra, Ayurveda, Kundalini Studies, and Tantra has never been more accessible. Check out our course catalog below.">
 						<h2>Course Catalog</h2>
-						<hr class="primary" />
+						<hr className="primary" />
 						<div className="card-container">
-							{data.courses.map(({ id, modules, ...props }) => (
+							{courses.map(({ id, modules, ...props }) => (
 								<Card
 									ActionButtons={() => (
-										<div className="button-group">
+										<p className="button-group">
 											<Button
 												onClick={() =>
 													updateState('activeCourse', id, () =>
@@ -42,14 +49,14 @@ export default class Module extends Component {
 												color="primary">
 												Information
 											</Button>
-										</div>
+										</p>
 									)}
 									updateState={updateState}
 									key={id}
 									additional={
-										<div>
+										<p>
 											<span>Modules: {modules.length}</span>
-										</div>
+										</p>
 									}
 									{...props}
 								/>
@@ -58,13 +65,16 @@ export default class Module extends Component {
 					</Jumbotron>
 				</Main>
 			);
-		} else return <SignupWizard />;
+		} else {
+			PAGE = 'signup';
+			COMPONENT = <SignupWizard updateState={this.props.updateState} />;
+		}
+
+		return <div id={`page--${PAGE}`}>{COMPONENT}</div>;
 	};
+
 	render() {
 		const { data, state, updateState } = this.props;
-
-		const MAIN = this.renderMain(state.user);
-
-		return <div id="page--index">{MAIN}</div>;
+		return this.renderMain(data, state, updateState);
 	}
 }
