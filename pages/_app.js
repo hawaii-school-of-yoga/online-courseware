@@ -12,7 +12,7 @@ import '../styles/index.scss';
 import '../styles/bootstrap.scss';
 
 const defaultState = {
-	userGroup: 0,
+	user: 0,
 	activeCourse: 1,
 	activeModule: 1,
 	loading: true,
@@ -61,25 +61,29 @@ export default class MyApp extends App {
 	};
 
 	render() {
-		if (this.state.loading) {
+		const { loading, user } = this.state;
+
+		if (loading) {
 			return <Loading />;
 		}
 
+		const { activeCourse, activeModule } = this.state;
 		const { Component, pageProps } = this.props;
 
 		let currentCourse = mocks.courses.filter(
-			(course) => course.id === this.state.activeCourse,
+			(course) => course.id === activeCourse,
 		);
 		currentCourse = currentCourse[0];
 
 		let currentModule = currentCourse.modules.filter(
-			(module) => module.id === this.state.activeModule,
+			(module) => module.id === activeModule,
 		);
 		currentModule = currentModule[0];
 
 		const state = {
 			course: currentCourse,
 			module: currentModule,
+			user,
 		};
 
 		return (

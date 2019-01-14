@@ -8,13 +8,12 @@ import Card from '../components/molecules/Card';
 
 import Main from '../components/templates/Main';
 import Jumbotron from '../components/templates/Jumbotron';
+import SignupWizard from '../components/organisms/SignupWizard';
 
 export default class Module extends Component {
-	render() {
-		const { data, state, updateState } = this.props;
-
-		return (
-			<div id="page--index">
+	renderMain = (user) => {
+		if (user) {
+			return (
 				<Main state={state} user={data.user}>
 					<Jumbotron
 						title="Hawaii School of Yoga Online Course Portal"
@@ -58,7 +57,14 @@ export default class Module extends Component {
 						</div>
 					</Jumbotron>
 				</Main>
-			</div>
-		);
+			);
+		} else return <SignupWizard />;
+	};
+	render() {
+		const { data, state, updateState } = this.props;
+
+		const MAIN = this.renderMain(state.user);
+
+		return <div id="page--index">{MAIN}</div>;
 	}
 }
