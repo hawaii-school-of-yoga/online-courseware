@@ -1,15 +1,15 @@
 import React from 'react';
-
 import App, { Container } from 'next/app';
 import Router from 'next/router';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import mocks from '../mocks';
 
 import Loading from '../components/atoms/Loading';
 
-import '../styles/index.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/bootstrap.scss';
+import '../styles/index.scss';
 
 const defaultState = {
 	track: 0,
@@ -41,6 +41,7 @@ export default class MyApp extends App {
 		const { router } = this.props;
 		router.prefetch('/module');
 		router.prefetch('/course');
+		router.prefetch('/profile');
 	}
 
 	static async getInitialProps({ Component, router, ctx }) {

@@ -8,6 +8,7 @@ export default class CourseNavigator extends Component {
 		const { course, module } = this.props;
 		const coursePage = window.location.pathname.includes('course');
 		const modulePage = window.location.pathname.includes('module');
+		const profilePage = window.location.pathname.includes('profile');
 
 		const courseCrumb = (
 			<BreadcrumbItem>
@@ -25,15 +26,24 @@ export default class CourseNavigator extends Component {
 			</BreadcrumbItem>
 		);
 
+		const profileCrumb = (
+			<BreadcrumbItem>
+				<Link prefetch href="/profile">
+					<a>Profile</a>
+				</Link>
+			</BreadcrumbItem>
+		);
+
 		return (
 			<Breadcrumb>
 				<BreadcrumbItem>
 					<Link prefetch href="/">
-						<a>Courses</a>
+						<a>Main</a>
 					</Link>
 				</BreadcrumbItem>
 				{coursePage || modulePage ? courseCrumb : null}
 				{modulePage ? moduleCrumb : null}
+				{profilePage ? profileCrumb : null}
 			</Breadcrumb>
 		);
 	}

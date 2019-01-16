@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Router from 'next/router';
 import Link from 'next/link';
 
 import Star from '../../atoms/Star';
@@ -33,13 +34,21 @@ export default class Header extends Component {
 								{user.stars.map(({ star }) => <Star type={star.type} />)}>
 							</div> */}
 							<div className="button-group">
-								<Button style={styles.button.xs} color="success">
+								<Button
+									style={styles.button.xs}
+									color="success"
+									onClick={() => {
+										updateState('loading', true, () => {
+											Router.push('/profile');
+											updateState('loading', false);
+										});
+									}}>
 									My Profile
 								</Button>
 								<Button
 									style={styles.button.xs}
 									color="danger"
-									onClick={() => this.props.updateState('track', '')}>
+									onClick={() => this.props.updateState('track', 0)}>
 									Logout
 								</Button>
 							</div>
