@@ -27,7 +27,9 @@ export default class Header extends Component {
 						<h2>Online Wisdom Portal</h2>
 					</div>
 					<div className="user-bar">
-						<img src={user.img} />
+						<Link prefetch href="/profile">
+							<img src={user.img} />
+						</Link>
 						<div className="info-container">
 							<h4>{user.name}</h4>
 							{/* <div className="star-power">
