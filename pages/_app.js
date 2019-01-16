@@ -28,13 +28,19 @@ export default class MyApp extends App {
 	componentDidMount() {
 		if (typeof window !== 'undefined') {
 			const localStorageState = JSON.parse(
-				window.localStorage.getItem('won-rva'),
+				window.localStorage.getItem('hawaiischoolyoga'),
 			);
 
 			if (typeof localStorageState === 'object') {
 				this.setState({ ...localStorageState, loading: false });
 			}
 		}
+
+		// PREFETCH ROUTES
+
+		const { router } = this.props;
+		router.prefetch('/module');
+		router.prefetch('/course');
 	}
 
 	static async getInitialProps({ Component, router, ctx }) {
