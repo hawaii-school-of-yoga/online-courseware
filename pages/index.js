@@ -59,11 +59,7 @@ export default class Module extends Component {
 									)}
 									updateState={updateState}
 									key={id}
-									additional={
-										<p>
-											<span>Modules: {modules.length}</span>
-										</p>
-									}
+									additional={<span>Modules: {modules.length}</span>}
 									{...props}
 								/>
 							))}

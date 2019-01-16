@@ -55,7 +55,8 @@ export default class MyApp extends App {
 	}
 
 	updateState = (key, value, customCb = null) => {
-		console.log(key, value);
+		console.log('updateState', key, value);
+
 		this.setState({ loading: true });
 		this.setState({ [key]: value }, function() {
 			window.localStorage.setItem('hsyonline', JSON.stringify(this.state));
