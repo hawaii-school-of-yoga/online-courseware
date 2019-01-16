@@ -33,18 +33,24 @@ export default class Module extends Component {
 									ActionButtons={() => (
 										<p className="button-group">
 											<Button
-												onClick={() =>
-													updateState('activeCourse', id, () =>
-														Router.push('/module'),
-													)}
+												onClick={() => {
+													updateState('loading', true);
+													updateState('activeCourse', id, () => {
+														Router.push('/module');
+														updateState('loading', false);
+													});
+												}}
 												color="success">
 												Get Started
 											</Button>
 											<Button
-												onClick={() =>
-													updateState('activeCourse', id, () =>
-														Router.push('/course'),
-													)}
+												onClick={() => {
+													updateState('loading', true);
+													updateState('activeCourse', id, () => {
+														Router.push('/course');
+														updateState('loading', false);
+													});
+												}}
 												outline
 												color="primary">
 												Information
