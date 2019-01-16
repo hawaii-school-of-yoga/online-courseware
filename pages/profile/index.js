@@ -16,7 +16,7 @@ export default class Modules extends Component {
 			<div id="page--profile">
 				<Main updateState={updateState} user={data.user} state={state}>
 					<div className="title-bar">
-						<h1>My Profile</h1>
+						<h2>My Profile</h2>
 						<hr className="primary" />
 					</div>
 

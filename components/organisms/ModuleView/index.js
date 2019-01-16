@@ -8,24 +8,22 @@ export default class ModuleView extends Component {
 	render() {
 		const { module } = this.props;
 		return (
-			<div className="module">
-				<div className="module--container">
-					<div className="module--info">
-						<h2>{module.title}</h2>
-						<hr className="primary" />
-						<p>{module.description}</p>
-					</div>
+			<div className="module--container">
+				<div className="module--info">
+					<h2>{module.title}</h2>
+					<hr className="primary" />
+					<p>{module.description}</p>
+				</div>
 
-					<Video url={module.video} />
-					<div className="module--video-controls">
-						<div className="button-group">
-							<Button color="primary">
-								<i className="fas fa-sticky-note" /> Take Notes
-							</Button>
-							<Button disabled>
-								<i className="fas fa-sticky-note" /> Next Video
-							</Button>
-						</div>
+				<Video url={module.video} />
+				<div className="module--video-controls">
+					<div className="button-group">
+						<Button color="primary">
+							<i className="fas fa-sticky-note" /> Take Notes
+						</Button>
+						<Button disabled>
+							<i className="fas fa-sticky-note" /> Next Video
+						</Button>
 					</div>
 				</div>
 			</div>

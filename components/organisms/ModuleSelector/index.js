@@ -18,26 +18,31 @@ export default class ModuleSelector extends Component {
 			<div className="sidebar">
 				<ProgressBar percent={courseProgressInt} />
 
-				<ul>
+				<div className="module-list">
 					{course.modules.map(({ moduleId, id, title }) => {
 						// TODO: calculate percentage of completion based on data upgrades...
 						const percent = module.id === id ? 1 : 0;
 
 						return (
-							<li key={id}>
+							<div className="module" key={id}>
 								<Button
 									style={styles.button.sidebar}
-									outline
 									size="sm"
-									onClick={() => updateState('activeModule', id)}
-									color={id === module.id ? 'primary' : 'secondary'}
+									onClick={() =>
+										module.id !== id && updateState('activeModule', id)}
+									color={id === module.id ? 'success' : 'secondary'}
 									disabled={id !== module.id}>
-									<Status percentage={percent} /> {moduleId} - {title}
+									<div className="module--text">
+										<Status percentage={percent} />
+										<span>
+											{moduleId} - {title}
+										</span>
+									</div>
 								</Button>
-							</li>
+							</div>
 						);
 					})}
-				</ul>
+				</div>
 			</div>
 		);
 	}
