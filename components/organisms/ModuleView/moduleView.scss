@@ -5,7 +5,9 @@
 
 		padding-left: 8px;
 
-		border-left: 2px solid #007bff;
+		@media (min-width: 768px) {
+			border-left: 2px solid #007bff;
+		}
 	}
 
 	&--info {

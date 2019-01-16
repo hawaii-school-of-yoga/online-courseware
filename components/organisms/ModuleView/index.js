@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Video from '../../atoms/Video';
 import Button from '../../atoms/Button';
+import ReadMore from '../../atoms/ReadMore';
 
 import './moduleView.scss';
 
@@ -12,7 +13,9 @@ export default class ModuleView extends Component {
 				<div className="module--info">
 					<h2>{module.title}</h2>
 					<hr className="primary" />
-					<p>{module.description}</p>
+					<p>
+						<ReadMore>{module.description}</ReadMore>
+					</p>
 				</div>
 
 				<Video url={module.video} />
