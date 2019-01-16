@@ -3,7 +3,7 @@
 		"id": 1,
 		"title": "200 Hour Hatha and Tantra Teacher Training",
 		"subtitle": "August 10-November 16, 2019",
-		"thumbnail": "http://placekitten.com/400/200",
+		"thumbnail": "/static/mocks/courses/1.png",
 		"description": "This Yoga Teacher Training is for yogis who are seeking Authentic Yoga- the Yoga that integrates body, mind and spirit. You will learn to teach Classical Yoga with it's rich history and philosophy as well as different styles of asana practice (vinyasa, restorative, alignment-based, etc...), with a strong foundation in Hatha Yoga, Tantra and Ayurveda.",
 		"modules": [
 			{
@@ -12,7 +12,7 @@
 				"title": "Kundalini Awakening",
 				"description": "The awakening of one's Kundalini is a byproduct of spiritual growth and takes place at higher spiritual levels. The Kundalini is spiritual energy, which lies dormant, coiled at the base of spine for an average person. Through spiritual practice when one achieves the spiritual level of 60% it begins to rise from the base of the spine through the Central channel (Sushumnanadi) right till the top of the head. While it does so, the Kundalini awakens each of 7 chakras along the way. Whatever the spiritual path, when there is spiritual growth the Kundalini rises.",
 				"video": "https://www.youtube.com/watch?v=duQ9_578RKw",
-				"thumbnail": "http://placekitten.com/408/204"
+				"thumbnail": "/static/mocks/courses/3.png"
 			},
 			{
 				"id": 2,
@@ -20,7 +20,7 @@
 				"title": "Heart Culture Festival",
 				"description": "This was a live jam accompanied by the incredibly talented Suyana  performed for the beautiful people at Heart Culture Festival 2017 in Austria. None of this music was pre-arranged, I had groups of clips and created the arrangements out of those clips on the fly in response to the energy of the moment. The vibe was incredibly special, people really tuned in and offered us the opportunity to dive deep into experimentation and to let things flow effortlessly from the heart. These loops are parts of tracks I have been working on and all the music is unreleased except for the remix I did for Lannka - but the version here is unique to the moment and not in the same form as the released version. *All of these tracks are now released except for Shiva Shambo which still only exists as loops.",
 				"video": "https://www.youtube.com/watch?v=b5H3b_Hh0Lw",
-				"thumbnail": "http://placekitten.com/406/203"
+				"thumbnail": "/static/mocks/courses/4.png"
 			},
 			{
 				"id": 3,
@@ -28,7 +28,7 @@
 				"title": "Carbon Based Lifeforms",
 				"description": "This was a live jam accompanied by the incredibly talented Suyana  performed for the beautiful people at Heart Culture Festival 2017 in Austria. None of this music was pre-arranged, I had groups of clips and created the arrangements out of those clips on the fly in response to the energy of the moment. The vibe was incredibly special, people really tuned in and offered us the opportunity to dive deep into experimentation and to let things flow effortlessly from the heart. These loops are parts of tracks I have been working on and all the music is unreleased except for the remix I did for Lannka - but the version here is unique to the moment and not in the same form as the released version. *All of these tracks are now released except for Shiva Shambo which still only exists as loops.",
 				"video": "https://www.youtube.com/watch?v=5o_uF1L5l6o",
-				"thumbnail": "http://placekitten.com/404/202"
+				"thumbnail": "/static/mocks/courses/5.png"
 			}
 		]
 	},
@@ -36,7 +36,7 @@
 		"id": 2,
 		"title": "Example Other Course",
 		"subtitle": "August 23 - Decemer 12, 2019",
-		"thumbnail": "http://placekitten.com/402/201",
+		"thumbnail": "/static/mocks/courses/2.png",
 		"description": "This course is just another course that is clearly a placeholder designed to just fill some space and spice up the user interface prototype",
 		"modules": [
 			{
@@ -45,7 +45,7 @@
 				"title": "Kundalini Awakening",
 				"description": "The awakening of one's Kundalini is a byproduct of spiritual growth and takes place at higher spiritual levels. The Kundalini is spiritual energy, which lies dormant, coiled at the base of spine for an average person. Through spiritual practice when one achieves the spiritual level of 60% it begins to rise from the base of the spine through the Central channel (Sushumnanadi) right till the top of the head. While it does so, the Kundalini awakens each of 7 chakras along the way. Whatever the spiritual path, when there is spiritual growth the Kundalini rises.",
 				"video": "https://www.youtube.com/watch?v=duQ9_578RKw",
-				"thumbnail": "http://placekitten.com/410/205"
+				"thumbnail": "/static/mocks/courses/3.png"
 			},
 			{
 				"id": 2,
@@ -53,7 +53,7 @@
 				"title": "Heart Culture Festival",
 				"description": "This was a live jam accompanied by the incredibly talented Suyana  performed for the beautiful people at Heart Culture Festival 2017 in Austria. None of this music was pre-arranged, I had groups of clips and created the arrangements out of those clips on the fly in response to the energy of the moment. The vibe was incredibly special, people really tuned in and offered us the opportunity to dive deep into experimentation and to let things flow effortlessly from the heart. These loops are parts of tracks I have been working on and all the music is unreleased except for the remix I did for Lannka - but the version here is unique to the moment and not in the same form as the released version. *All of these tracks are now released except for Shiva Shambo which still only exists as loops.",
 				"video": "https://www.youtube.com/watch?v=b5H3b_Hh0Lw",
-				"thumbnail": "http://placekitten.com/412/206"
+				"thumbnail": "/static/mocks/courses/4.png"
 			}
 		]
 	}

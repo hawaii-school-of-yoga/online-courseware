@@ -23,7 +23,7 @@ export default ({
 	active,
 }) => {
 	return (
-		<Card className={active && 'active'}>
+		<Card className={active ? 'active' : ''}>
 			<CardImg top width="100%" src={thumbnail} alt="Card image cap" />
 			<CardBody>
 				<CardTitle>{trimAndAppend(title, 24, '')}</CardTitle>

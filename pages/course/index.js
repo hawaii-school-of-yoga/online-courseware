@@ -28,6 +28,7 @@ export default class Modules extends Component {
 						<div className="card-container">
 							{course.modules.map(({ id, modules, ...props }) => (
 								<Card
+									{...props}
 									active={id === module.id}
 									ActionButtons={() => (
 										<div className="button-group">
@@ -44,7 +45,6 @@ export default class Modules extends Component {
 									)}
 									updateState={updateState}
 									key={id}
-									{...props}
 								/>
 							))}
 						</div>
