@@ -8,6 +8,10 @@ export default class SignupWizard extends Component {
 
 	setStep = (step) => this.setState({ step });
 
+	componentWillUnmount() {
+		this.setStep(0);
+	}
+
 	render() {
 		const { updateState } = this.props;
 		const { step } = this.state;

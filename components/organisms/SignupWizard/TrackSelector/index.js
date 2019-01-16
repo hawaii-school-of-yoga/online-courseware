@@ -6,7 +6,7 @@ import './trackselector.scss';
 
 export default class TrackSelector extends Component {
 	handleTrackChoice = (track) => {
-		this.props.updateState('track', track, () => this.props.setStep(0));
+		this.props.updateState('track', track);
 	};
 
 	render() {
