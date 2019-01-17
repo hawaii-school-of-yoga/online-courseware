@@ -1,0 +1,9 @@
+#page {
+	&--module {
+		.flex-container {
+			@media (min-width: 768px) {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+}

@@ -2,13 +2,28 @@ $min-width: 100%;
 
 .sidebar {
 	margin-right: 8px;
-	min-width: $min-width;
 
 	h2 {
 		font-size: 28px;
 	}
 
+	.modules-container {
+		.modules-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			i {
+				padding: 0 16px;
+				font-size: 24px;
+			}
+		}
+	}
+
 	.module-list {
+		padding-bottom: 8px;
+		margin-bottom: 8px;
+
 		.module {
 			margin: 4px 0;
 
@@ -31,10 +46,14 @@ $min-width: 100%;
 }
 
 @media (min-width: 768px) {
-	$min-width: 180px;
-
 	.sidebar {
-		min-width: $min-width;
+		.modules-container {
+			border-bottom: none;
+
+			.btn {
+				outline: none;
+			}
+		}
 
 		.module-list {
 			.module {

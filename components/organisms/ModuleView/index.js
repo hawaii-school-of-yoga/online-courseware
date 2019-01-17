@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { ListGroup, ListGroupItem } from 'reactstrap';
+
 import Video from '../../atoms/Video';
 import Button from '../../atoms/Button';
 import ReadMore from '../../atoms/ReadMore';
@@ -8,6 +10,7 @@ import './moduleView.scss';
 export default class ModuleView extends Component {
 	render() {
 		const { module } = this.props;
+
 		return (
 			<div className="module--container">
 				<div className="module--info">
