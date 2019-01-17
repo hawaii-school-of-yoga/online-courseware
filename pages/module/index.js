@@ -5,6 +5,8 @@ import ModuleSelector from '../../components/organisms/ModuleSelector';
 
 import Main from '../../components/templates/Main';
 
+import './module.scss';
+
 export default class Modules extends Component {
 	render() {
 		const { data, state, updateState } = this.props;

@@ -30,8 +30,9 @@ export default class ModuleSelector extends Component {
 		return (
 			<div className="sidebar">
 				<ListGroup>
-					<ListGroupItem>
+					<ListGroupItem className="title-bar">
 						<h2>{course.title}</h2>
+						<hr className="primary" />
 					</ListGroupItem>
 
 					<ListGroupItem>

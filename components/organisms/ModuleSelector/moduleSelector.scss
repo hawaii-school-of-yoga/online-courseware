@@ -1,7 +1,12 @@
 $min-width: 100%;
 
 .sidebar {
-	margin-right: 8px;
+	.title-bar {
+		text-align: center;
+		hr {
+			margin: 0 auto;
+		}
+	}
 
 	h2 {
 		font-size: 28px;
